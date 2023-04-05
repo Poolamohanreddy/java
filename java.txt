@@ -1,0 +1,652 @@
+1st 
+import java.util.Scanner; 
+public class QuadraticEquationExample1 
+{ 
+public static void main(String[] Strings) 
+{ 
+Scanner input = new Scanner(System.in); 
+System.out.print("Enter the value of a: "); 
+double a = input.nextDouble(); 
+System.out.print("Enter the value of b: "); 
+double b = input.nextDouble(); 
+System.out.print("Enter the value of c: "); 
+double c = input.nextDouble(); 
+double d= b * b - 4.0 * a * c; 
+if (d> 0.0) 
+{ 
+double r1 = (-b + Math.pow(d, 0.5)) / (2.0 * a); 
+double r2 = (-b - Math.pow(d, 0.5)) / (2.0 * a); 
+System.out.println("The roots are " + r1 + " and " + r2); 
+} 
+else if (d == 0.0) 
+{ 
+double r1 = -b / (2.0 * a); 
+System.out.println("The root is " + r1); 
+} 
+else 
+{ 
+System.out.println("Roots are not real."); 
+} 
+} 
+} 
+OUTPUT
+Enter the value of a:1
+Enter the value of b:2
+Enter the value of c:1
+The root is -1.0
+Enter the value of a:2
+Enter the value of b:3
+Enter the value of c:4
+The root are not real
+
+
+
+2nd
+
+import java.util.Scanner;
+public class Student {
+public Student(String stuUSN,String stuName,String stuBranch,String stuPhone)
+{
+System.out.println("Student USN is:"+stuUSN);
+System.out.println("Student Name is:"+stuName);
+System.out.println("Student Branch is:"+stuBranch);
+System.out.println("Student Phone number is:"+stuPhone);
+}
+public static void main(String[] args)
+{
+Scanner readInput = new Scanner(System.in);
+System.out.println("Enter number of student objects to create");
+int numberOfStudents = readInput.nextInt();
+for(int i =1;i<=numberOfStudents;i++)
+{
+System.out.println("Enter Student USN");
+String usn = readInput.next();
+System.out.println("Enter Student Name");
+String name = readInput.next();
+System.out.println("Enter Student Branch");
+String branch = readInput.next();
+System.out.println("Enter Student Phone");
+String phone = readInput.next();
+new Student(usn, name,branch, phone);
+}
+}
+}
+OUTPUT:
+Enter number of student objects to create
+3
+Enter student USN
+1ckcs0021
+Enter student name
+Abhi ram
+Enter student Branch
+cs
+
+
+
+
+3a
+import java.util.Scanner;
+public class CodesCracker
+{
+ public static void main(String[] args)
+ {
+ int num, i, count=0;
+ Scanner s = new Scanner(System.in);
+ 
+ System.out.print("Enter a Number: ");
+ num = s.nextInt();
+ 
+ for(i=2; i<num; i++)
+ {
+ if(num%i == 0)
+ {
+ count++;
+ break;
+ }
+ }
+ 
+ if(count==0)
+ System.out.println("\nIt is a Prime Number.");
+ else
+ System.out.println("\nIt is not a Prime Number.");
+ }
+}
+
+
+
+
+3b
+import java.util.Scanner;
+public class JavaExample {
+ public static void main(String[] args) {
+ double num1, num2;
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Enter first number:");
+ num1 = scanner.nextDouble();
+ System.out.print("Enter second number:");
+ num2 = scanner.nextDouble();
+ System.out.print("Enter an operator (+, -, *, /): ");
+ char operator = scanner.next().charAt(0);
+ scanner.close();
+ double output;
+ switch(operator)
+ {
+ case '+':
+ output = num1 + num2;
+ break;
+ case '-':
+ output = num1 - num2;
+ break;
+ case '*':
+ output = num1 * num2;
+ break;
+ case '/':
+ output = num1 / num2;
+ break;
+ 
+ System.out.printf("You have entered wrong operator");
+ return;
+ }
+ System.out.println(num1+" "+operator+" "+num2+": "+output);
+ }
+}
+
+
+
+
+
+4th
+import java.util.*;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class StaffDetails 
+{
+public static void main(String [] args)
+{
+staff s=new staff();
+teaching t=new teaching();
+technical te=new technical();
+contract c=new contract();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter number of staff");
+int n=sc.nextInt();
+for(int i=1;i<=n;i++)
+{
+System.out.println("Enter staffid");
+s.staffid=sc.next();
+System.out.println("Enter staffname");
+s.name=sc.next();
+System.out.println("Enter staffphone");
+s.phone=sc.nextLong();
+System.out.println("Enter staffsalary");
+s.salary=sc.nextDouble();
+System.out.println("Enter staffdomain");
+System.out.println("Enter staffpublications");
+t.publications=sc.next();
+System.out.println("Enter staffskills");
+te.skills=sc.next();
+System.out.println("Enter staffperiod");
+c.period=sc.nextInt();
+System.out.println("Enter staffid:"+s.staffid);
+System.out.println("Enter staffname:"+s.name);
+System.out.println("Enter staffphone:"+s.phone);
+System.out.println("Enter staffsalary:"+s.salary);
+System.out.println("Enter staffdomain:"+t.domain);
+System.out.println("Enter staffpublications:"+t.publications);
+System.out.println("Enter staffskills:"+te.skills);
+System.out.println("Enter staffperiod:"+c.period);
+}
+}
+}
+class staff
+{
+String staffid;
+String name;
+long phone;
+double salary;
+}
+class technical extends staff
+{
+String skills;
+}
+class teaching extends staff
+{
+String domain;
+String publications;
+}
+class contract extends staff
+{
+int period;
+}
+OUT PUT:
+Enter number of staff
+3
+Enter staff id
+1111
+Enter staff name
+Rani
+Enter staff phone
+8565237859
+
+
+
+
+
+5th
+Method overloading
+class DisplayOverloading3
+{
+public void disp(char c, int num)
+{
+System.out.println("I’m the first definition of method disp");
+}
+public void disp(int num, char c)
+{
+System.out.println("I’m the second definition of method disp" );
+}
+}
+public class Sample3
+{
+public static void main(String args[])
+{
+DisplayOverloading3 obj = new DisplayOverloading3();
+obj.disp('a',1);
+obj.disp(2,'b');
+}
+}
+OUTPUT:
+I’m the first definition of method disp
+I’m the second definition of method disp
+Constructor overloading
+public class Student { 
+int id; 
+String name; 
+Student(){ 
+System.out.println("this a default constructor"); 
+} 
+Student(int i, String n){ 
+id = i; 
+name = n; 
+} 
+public static void main(String[] args) {
+Student s = new Student(); 
+System.out.println("\nDefault Constructor values: \n"); 
+System.out.println("Student Id : "+s.id + "\nStudent Name : "+s.name); 
+System.out.println("\nParameterized Constructor values: \n"); 
+Student student = new Student(10, "David"); 
+System.out.println("Student Id : "+student.id + "\nStudent Name : 
+"+student.name); 
+} 
+} 
+OUTPUT:
+this a default constructor
+Defualt Constructor values:
+Student ID : 0
+Student Name: null
+Parameterized Constructor values:
+Student ID : 10
+Student Name: David
+
+
+
+
+
+
+6th 
+package currencyconversion;
+import java.util.*;
+public class currency
+{
+double inr,usd;
+double euro,yen;
+Scanner in=new Scanner(System.in);
+public void dollartorupee()
+{
+System.out.println("Enter dollars to convert into Rupees:");
+usd=in.nextInt();
+inr=usd*67;
+System.out.println("Dollar ="+usd+"equal to INR="+inr);
+}
+public void rupeetodollar()
+{
+System.out.println("Enter Rupee to convert into Dollars:");
+inr=in.nextInt();
+usd=inr/67;
+System.out.println("Rupee ="+inr+"equal to Dollars="+usd);
+}
+public void eurotorupee()
+{
+System.out.println("Enter euro to convert into Rupees:");
+euro=in.nextInt();
+inr=euro*79.50;
+System.out.println("Euro ="+euro +"equal to INR="+inr);
+}
+public void rupeetoeuro()
+{
+System.out.println("Enter Rupees to convert into Euro:");
+inr=in.nextInt();
+euro=(inr/79.50);
+System.out.println("Rupee ="+inr +"equal to Euro="+euro);
+}
+public void yentorupee()
+{
+System.out.println("Enter yen to convert into Rupees:");
+yen=in.nextInt();
+inr=yen*0.61;
+System.out.println("YEN="+yen +"equal to INR="+inr);
+}
+public void rupeetoyen()
+{
+System.out.println("Enter Rupees to convert into Yen:");
+inr=in.nextInt();
+yen=(inr/0.61);
+System.out.println("INR="+inr +"equal to YEN"+yen);
+}
+}
+Distance.java
+package distanceconversion;
+import java.util.*;
+public class distance
+{
+double km,m,miles;
+Scanner sc = new Scanner(System.in);
+public void kmtom()
+{
+System.out.print("Enter in km ");
+km=sc.nextDouble();
+m=(km*1000);
+System.out.println(km+"km" +"equal to"+m+"metres");
+}
+public void mtokm()
+{
+System.out.print("Enter in meter ");
+m=sc.nextDouble();
+km=(m/1000);
+System.out.println(m+"m" +"equal to"+km+"kilometres");
+}
+public void milestokm()
+{ 
+System.out.print("Enter in miles");
+miles=sc.nextDouble();
+km=(miles*1.60934);
+System.out.println(miles+"miles" +"equal to"+km+"kilometres");
+}
+public void kmtomiles()
+{
+System.out.print("Enter in km");
+km=sc.nextDouble();
+miles=(km*0.621371);
+System.out.println(km+"km" +"equal to"+miles+"miles");
+}
+}
+timer.java
+package timeconversion;
+import java.util.*;
+public class timer
+{
+int hours,seconds,minutes;
+int input;
+Scanner sc = new Scanner(System.in);
+public void secondstohours()
+{
+System.out.print("Enter the number of seconds: ");
+input = sc.nextInt();
+hours = input / 3600;
+minutes = (input % 3600) / 60;
+seconds = (input % 3600) % 60;
+System.out.println("Hours: " + hours);
+System.out.println("Minutes: " + minutes);
+System.out.println("Seconds: " + seconds);
+}
+public void minutestohours()
+{
+System.out.print("Enter the number of minutes: ");
+minutes=sc.nextInt();
+hours=minutes/60;
+minutes=minutes%60;
+System.out.println("Hours: " + hours);
+System.out.println("Minutes: " + minutes);
+}
+public void hourstominutes()
+{ 
+System.out.println("enter the no of hours");
+hours=sc.nextInt();
+minutes=(hours*60);
+System.out.println("Minutes: " + minutes);
+}
+public void hourstoseconds()
+{ 
+System.out.println("enter the no of hours");
+hours=sc.nextInt();
+seconds=(hours*3600);
+System.out.println("Minutes: " + seconds);
+}
+}
+
+
+
+
+
+7th
+converter.java
+import java.util.*;
+import java.io.*;
+import currencyconversion.*;
+import distanceconversion.*;
+import timeconversion.*;
+class converter
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int choice,ch;
+currency c=new currency();
+distance d=new distance();
+timer t=new timer();
+do
+{
+System.out.println("1.dollar to rupee ");
+System.out.println("2.rupee to dollar ");
+System.out.println("3.Euro to rupee ");
+System.out.println("4..rupee to Euro ");
+System.out.println("5.Yen to rupee ");
+System.out.println("6.Rupee to Yen ");
+System.out.println("7.Meter to kilometer ");
+System.out.println("8.kilometer to meter ");
+System.out.println("9.Miles to kilometer ");
+System.out.println("10.kilometer to miles");
+System.out.println("11.Hours to Minutes");
+System.out.println("12.Hours to Seconds");
+System.out.println("13.Seconds to Hours");
+System.out.println("14.Minutes to Hours");
+System.out.println("Enter ur choice");
+choice=s.nextInt();
+switch(choice)
+{
+case 1:
+{
+c.dollartorupee();
+break;
+}
+case 2:
+{
+c.rupeetodollar();
+break;
+}
+case 3:
+{
+c.eurotorupee();
+break;
+}
+case 4:
+{
+c.rupeetoeuro();
+break;
+}
+case 5:
+{c.yentorupee();
+break;}
+case 6 :
+{
+c.rupeetoyen();
+break;
+}
+case 7 :
+{
+d.mtokm();
+break;
+}
+case 8 :
+{
+d.kmtom();
+break;
+}
+case 9 :
+{
+d.milestokm();
+break;
+}
+case 10 :
+{
+d.kmtomiles();
+break;
+}
+case 11 :
+{
+t.hourstominutes();
+break;
+}
+case 12 :
+{
+t.hourstoseconds();
+break;
+}
+case 13 :
+{
+t.secondstohours();
+break;
+}
+case 14 :
+{
+t.minutestohours();
+break;
+}}
+System.out.println("Enter 0 to quit and 1 to continue ");
+ch=s.nextInt();
+}while(ch==1);
+}
+}
+
+
+
+
+8th
+import java.util.Scanner;
+public class division
+{
+public static void main(String[] args)
+{
+int a,b,result;
+Scanner input =new Scanner(System.in);
+System.out.println("Input two integers");
+a=input.nextInt();
+b=input.nextInt();
+try
+{
+result=a/b;
+System.out.println("Result="+result);
+}
+catch(ArithmeticException e)
+{
+System.out.println("exception caught: Divide by zeroerror"+e);
+}
+}
+}
+
+
+
+
+
+
+9th
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Array {
+public static void main(String[] args) {
+ArrayList<String>listOfStrings = new ArrayList<String>();
+Scanner scan = new Scanner(System.in);
+String choice;
+String value;
+String element;
+do {
+System.out.println("--------------------- MENU --------------------------");
+System.out.println("a - Append the string");
+System.out.println("b - Insert the string at the particular index");
+System.out.println("c - Search for the string");
+System.out.println("d - List all the strings that begins with a character");
+System.out.println("e - Exit the Menu");
+System.out.println("-----------------------------------------------------");
+System.out.print("Enter your choice : ");
+choice = scan.nextLine();
+if(choice.equals("a")) {
+System.out.print("Enter the string to be appended : ");
+value = scan.nextLine();
+listOfStrings.add(value);
+System.out.println("Content after append is : ");
+System.out.println(listOfStrings);
+}
+else if(choice.equals("b")) {
+System.out.print("Enter the string to be added : ");
+value = scan.nextLine();
+System.out.print("Enter the index : ");
+int index = Integer.parseInt(scan.nextLine());
+if(index >listOfStrings.size()) {
+System.out.println("Invalid Index....");
+continue;
+}
+listOfStrings.add(index,value);
+System.out.println("Content after inserting "+value+" at "+index+" location is 
+: ");
+System.out.println(listOfStrings);
+}
+else if(choice.equals("c")) {
+System.out.print("Enter the element to be searched : ");
+element = scan.nextLine();
+int location = Array.findElement(listOfStrings, element);
+if(location == -1) {
+System.out.println(element+" is not found in the list "+listOfStrings);
+}
+else {
+System.out.println(element+" is found at location "+(location+1)+" in the list 
+"+listOfStrings);
+}
+}
+else if(choice.equals("d")) {
+System.out.print("Enter the first character of the strings to be searched and 
+listed : ");
+element = scan.nextLine();
+//Array.list The Strings StartsWithElement(listOfStrings,element);
+}
+else if(choice.matches("[f-z]*")){
+System.out.println("Invalid Choice... Try again...");
+}
+}while(!choice.equals("e"));
+scan.close();
+}
+public static void 
+listTheStringsStartsWithElement(ArrayList<String>stringList,String element){
+System.out.print("The elements that starts with "+element+" character are - ");
+for(String item :stringList)
+if(item.startsWith(element)) {
+System.out.print(item+" ");
+}
+System.out.println();
+}
+public static int findElement(ArrayList<String>stringList,String element){
+for(int index = 0 ; index <stringList.size() ; index++ )
+if(stringList.get(index).equals(element)) {
+return index;
+}
+return -1;
+}
+}
